@@ -1,15 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <router-view :store="store"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { default as Store } from  './store/store'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      store: Store
+    }
   }
 }
 </script>
